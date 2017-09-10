@@ -63,10 +63,6 @@ void drawLine(pixel_t start, pixel_t end) {
         swap = true;
     }
 
-    int d = 2 * dy - dx;
-
-    int incr_e = 2 * dy;
-    int incr_ne = 2 * (dy - dx);
     int incx = 0;
     int incy = 0;
 
@@ -79,6 +75,10 @@ void drawLine(pixel_t start, pixel_t end) {
         incy = 1;
     else if (start.y > end.y)
         incy = -1;
+
+    int d = 2 * dy - dx;
+    int incr_e = 2 * dy;
+    int incr_ne = 2 * (dy - dx);
 
     pixel_t aux = start;
 
